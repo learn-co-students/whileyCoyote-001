@@ -15,8 +15,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // Write your loop here!
+    int steps =0;
+
     
-    
+    do {
+        if (steps%10 == 0) {
+            if(steps == 50){
+                NSLog(@"SMASH!");}
+            NSLog(@"YOU'RE CUCKOO!");
+        }
+        steps++;
+        NSLog(@"Meep! Meep!");
+        
+        
+    } while (steps<= 50);
     
     
     
