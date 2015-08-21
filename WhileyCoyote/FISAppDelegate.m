@@ -14,9 +14,21 @@
 @implementation FISAppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // Write your loop here!
+    NSInteger steps = 0;
+    NSUInteger anvil = arc4random_uniform(25) + 26;
     
-    
+    do {
+        if (steps > 0 && steps%10 == 0) {
+            NSLog(@"YOU'RE CUKOO!");
+        }
+        if (steps == anvil) {
+            NSLog(@"SMASH");
+        }
+        else {
+        NSLog(@"Meep! Meep! %lu", steps+1);
+        }
+        steps++;
+    } while (steps <= anvil);
     
     
     
