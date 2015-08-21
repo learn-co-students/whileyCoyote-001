@@ -16,7 +16,23 @@
     
     // Write your loop here!
     
+    NSUInteger steps=1;
+    NSUInteger avil=arc4random_uniform(25) + 26;
     
+    
+    do {
+        
+        if((steps%10==0) && steps>0){
+            
+            NSLog(@"YOU'RE CUCKOO!");
+        }
+        if(steps==avil){
+            NSLog(@"SMASH!");
+        }
+        NSLog( @" %ld - Meep! Meep!",steps);
+        
+        steps++;
+    } while (steps<=avil);
     
     
     
